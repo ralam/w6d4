@@ -5,7 +5,9 @@
     this.$gutter = $(this.$el.find(".gutter-images")[0]);
     this.$activeImage = $(this.$gutter.children()[0]);
     this.activate(this.$activeImage);
-    this.$el.on("mouseover", ".gutter-images img", this.clickHandler.bind(this));
+    this.$el.on("click", ".gutter-images img", this.clickHandler.bind(this));
+    this.$el.on("mouseenter", ".gutter-images img", this.enterHandler.bind(this));
+    this.$el.on("mouseleave", ".gutter-images img", this.leaveHandler.bind(this));
   };
 
   $.fn.thumbnails = function () {
@@ -15,11 +17,18 @@
   };
 
   $.Thumbnails.prototype.clickHandler = function (event) {
-
     var $target = $(event.currentTarget);
     this.$activeImage = $target;
     this.activate($target);
+  };
 
+  $.Thumbnails.prototype.enterHandler = function (event) {
+    var $target = $(event.currentTarget);
+    this.activate($target);
+  };
+
+  $.Thumbnails.prototype.leaveHandler = function (event) {
+    this.activate(this.$activeImage);
   };
 
   $.Thumbnails.prototype.activate = function ($img) {
@@ -29,7 +38,7 @@
     $activeDiv.empty();
 
     $activeDiv.append($largeImage);
-
   };
+
 
 })(jQuery);
