@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>My Cool Website</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.2/build/cssreset/cssreset-min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./tabs.js"></script>
+    <link href="./tabs.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <script>
+    $(function() {
+      $('.tabs').tabs();
+    })
+  </script>
+  <body>
+    <ul class='tabs' data-content-tabs="#content-tabs">
+      <li><a href='javascript:void(0);' for='#growlithe' class='active'>Growlithe</a></li>
+      <li><a href='javascript:void(0);' for='#arcanine'>Arcanine</a></li>
+      <li><a href='javascript:void(0);' for='#poochyena'>Poochyena</a></li>
+    </ul>
+    <div id='content-tabs'>
+      <div class='tab-pane active' id='growlithe'>
+        <p>Growlithe is a quadruped, canine Pokémon.
+        It has orange fur with black stripes along its back and legs.
+        The fur on its muzzle, chest, belly, and tail is cream-colored, as well as an additional tuft of fur on top of its head.
+        Growlithe's coat is noticeably longer on its chest and tail. It has gray eyes, a black nose, and large, round ears.
+        Its forepaws have two visible claws, while its hind paws have three toes each. Each paw has a brown pad.
+        </p></div>
+      <div class='tab-pane' id='arcanine'>
+        <p>Arcanine is a quadruped, canine Pokémon with an orange pelt marked by jagged black stripes.
+        It has diamond-shaped ears with beige insides, black eyes, a round, black nose, and two pointed teeth protruding from its upper jaw.
+        Its head, muzzle, and chest are covered in shaggy, beige fur, except for two oval sections around each eye and ear.
+        Long tufts of fur grow behind its knees and around its ankles.
+        Its underside is black, and it has a billowing, beige tail that is bent in the middle.
+        Each paw has three toes and a round, pink pad.
+      </p></div>
+      <div class='tab-pane' id='poochyena'>
+        <p>Poochyena is a quadruped Pokémon similar in appearance to hyenas and canines.
+        Its body is primarily gray, with a black face, throat, feet, and belly.
+        Its eyes have yellow sclera and red irises, and its nose is also red. Its lower jaw has two pointed teeth sticking out.
+        The fur at the base of its tail is rumpled and shaggy. Poochyena has gray paw pads on its three-toed paws.
+      </p></div>
+    </div>
+  </body>
+</html>
