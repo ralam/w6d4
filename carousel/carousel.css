@@ -12,7 +12,6 @@ div.items{
   position: relative;
   display: block;
   overflow-x: hidden;
-  overflow-y: auto;
 }
 
 img {
