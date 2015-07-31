@@ -7,3 +7,12 @@ div.zoomable{
 div.zoomable img {
   width: 100%;
 }
+
+div.focus-box {
+  border: solid #000 1px;
+  background-color: #fff;
+  opacity: 70%;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+}
